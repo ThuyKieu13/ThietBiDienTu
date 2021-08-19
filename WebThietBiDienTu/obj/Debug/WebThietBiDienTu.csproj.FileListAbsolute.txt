@@ -1,0 +1,62 @@
+C:\Users\LENOVO Z470\Downloads\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\WebThietBiDienTu.dll
+C:\Users\LENOVO Z470\Downloads\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\WebThietBiDienTu.pdb
+C:\Users\LENOVO Z470\Downloads\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\Antlr3.Runtime.dll
+C:\Users\LENOVO Z470\Downloads\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\EntityFramework.dll
+C:\Users\LENOVO Z470\Downloads\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\LENOVO Z470\Downloads\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\LENOVO Z470\Downloads\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\Newtonsoft.Json.dll
+C:\Users\LENOVO Z470\Downloads\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\System.Net.Http.Formatting.dll
+C:\Users\LENOVO Z470\Downloads\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\System.Web.Http.dll
+C:\Users\LENOVO Z470\Downloads\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\System.Web.Http.WebHost.dll
+C:\Users\LENOVO Z470\Downloads\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\System.Web.Mvc.dll
+C:\Users\LENOVO Z470\Downloads\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\System.Web.Optimization.dll
+C:\Users\LENOVO Z470\Downloads\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\System.Web.Providers.dll
+C:\Users\LENOVO Z470\Downloads\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\System.Web.Razor.dll
+C:\Users\LENOVO Z470\Downloads\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\System.Web.WebPages.Deployment.dll
+C:\Users\LENOVO Z470\Downloads\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\System.Web.WebPages.dll
+C:\Users\LENOVO Z470\Downloads\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\System.Web.WebPages.Razor.dll
+C:\Users\LENOVO Z470\Downloads\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\WebGrease.dll
+C:\Users\LENOVO Z470\Downloads\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\EntityFramework.xml
+C:\Users\LENOVO Z470\Downloads\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\Newtonsoft.Json.xml
+C:\Users\LENOVO Z470\Downloads\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\System.Net.Http.Formatting.xml
+C:\Users\LENOVO Z470\Downloads\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\System.Web.Http.xml
+C:\Users\LENOVO Z470\Downloads\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\System.Web.Http.WebHost.xml
+C:\Users\LENOVO Z470\Downloads\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\System.Web.Mvc.xml
+C:\Users\LENOVO Z470\Downloads\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\System.Web.Razor.xml
+C:\Users\LENOVO Z470\Downloads\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\System.Web.WebPages.xml
+C:\Users\LENOVO Z470\Downloads\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\System.Web.WebPages.Deployment.xml
+C:\Users\LENOVO Z470\Downloads\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\System.Web.WebPages.Razor.xml
+C:\Users\LENOVO Z470\Downloads\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\obj\Debug\WebThietBiDienTu.dll
+C:\Users\LENOVO Z470\Downloads\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\obj\Debug\WebThietBiDienTu.pdb
+C:\Users\LENOVO Z470\Downloads\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\obj\Debug\WebThietBiDienTu.csprojResolveAssemblyReference.cache
+E:\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\WebThietBiDienTu.dll
+E:\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\WebThietBiDienTu.pdb
+E:\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\Antlr3.Runtime.dll
+E:\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\EntityFramework.dll
+E:\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\Microsoft.Web.Infrastructure.dll
+E:\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+E:\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\Newtonsoft.Json.dll
+E:\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\System.Net.Http.Formatting.dll
+E:\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\System.Web.Http.dll
+E:\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\System.Web.Http.WebHost.dll
+E:\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\System.Web.Mvc.dll
+E:\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\System.Web.Optimization.dll
+E:\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\System.Web.Providers.dll
+E:\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\System.Web.Razor.dll
+E:\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\System.Web.WebPages.Deployment.dll
+E:\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\System.Web.WebPages.dll
+E:\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\System.Web.WebPages.Razor.dll
+E:\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\WebGrease.dll
+E:\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\EntityFramework.xml
+E:\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\Newtonsoft.Json.xml
+E:\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\System.Net.Http.Formatting.xml
+E:\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\System.Web.Http.xml
+E:\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\System.Web.Http.WebHost.xml
+E:\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\System.Web.Mvc.xml
+E:\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\System.Web.Razor.xml
+E:\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\System.Web.WebPages.xml
+E:\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\System.Web.WebPages.Deployment.xml
+E:\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\bin\System.Web.WebPages.Razor.xml
+E:\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\obj\Debug\WebThietBiDienTu.dll
+E:\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\obj\Debug\WebThietBiDienTu.pdb
+E:\DoAnCNWeb\WebThietBiDienTu\WebThietBiDienTu\obj\Debug\WebThietBiDienTu.csprojResolveAssemblyReference.cache

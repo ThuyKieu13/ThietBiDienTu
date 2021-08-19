@@ -1,0 +1,313 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap/css/dinhdang.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row dong1">
+            <div class="col-md-2">
+                <img style="width: 100%;" src="~/Content/image/lo_go.png" />
+            </div>
+            <div class="col-md-5">
+                <div class="search-box">
+                    <form action="" class="search-form">
+                        <input type="text" placeholder="Search" id="search" autocomplete="off">
+                    </form>
+                    <div class="search-icon"><i class="fa fa-search search-icon"></i></div>
+                    <svg class="search-border" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" viewBox="0 0 671 111" style="enable-background: new 0 0 671 111;"
+                        xml:space="preserve">
+                        <path class="brder" d="M335.5,108.5h-280c-29.3,0-53-23.7-53-53v0c0-29.3,23.7-53,53-53h280" />
+                        <path class="brder" d="M335.5,108.5h280c29.3,0,53-23.7,53-53v0c0-29.3-23.7-53-53-53h-280" />
+                    </svg>
+                </div>
+
+                @*<form class="form-inline sm">
+                    <input type="text" id="txtSearch" class="form-control" style="width: 400px;" placeholder="Tìm kiếm sản phẩm..." />
+                    <a role="button" href="#" type="submit" id="btnSearch">
+                        <img style="width: 35px" src="~/Content/image/s.png"/>
+                    </a>
+                </form>*@
+            </div>
+            <div class="col-md-5">
+                <table>
+                    <tr>
+                        <td class="sm"><a href="#">
+                            <i class="fa fa-phone fa-rotate-90" aria-hidden="true"></i></a></td>
+                        <td class="sm"><a href="@Url.Action("XemGioHang", "DatHang")">
+                            @*<img src="~/Content/image/gh.png" />*@
+                            <i class="fa fa-shopping-bag"></i>
+                        </a></td>
+                        <td style="color: white">@Html.Action("KhoiTaoLayOut", "Home")</td>
+                        <td class="sm">
+                            <nav class="navbar">
+                                <div class="dropdown">
+                                    <a href="#" class="dropdown-toggle" id="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        @*<img style="width: 13%" src="~/Content/image/log.png" />*@
+                                        <i class="fa fa-user"></i>
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdown">
+                                        <div class="container" style="text-align: center">
+                                            <form action="/KhachHang/DangNhap" method="post">
+                                                <p style="color: #056bf7; font-size: 17px;">ĐĂNG NHẬP TÀI KHOẢN</p>
+                                                <p>Nhập tài khoản và mật khẩu của bạn</p>
+                                                <p>
+                                                    <input type="text" name="txtName" placeholder="Tên đăng nhập" style="width: 280px;" />
+                                                </p>
+                                                <p>
+                                                    <input type="password" name="txtPass" placeholder="Mật khẩu" style="width: 280px;" />
+                                                </p>
+                                                <p>
+                                                    Khách hàng mới?
+                                                    <button type="button" class="btn btn-primary" style="border-radius: 120px" data-toggle="modal" data-target="#myModal" onclick="clearTextBox();">Đăng ký</button>
+                                                </p>
+                                                <p>
+                                                    <button class="btn btn-primary" style="border-radius: 120px" type="submit">Đăng nhập</button>
+                                                </p>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </nav>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td style="color: white">@Html.Action("KH", "Home")</td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md">
+                <div class="navbar">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: black; font-weight: bold" href="@Url.Action("Index", "Home")">TRANG CHỦ</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: black; font-weight: bold" href="@Url.Action("CreateAccount", "KhachHang")">ĐĂNG KÝ</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: black; font-weight: bold" href="@Url.Action("Admin", "Home")">ADMIN</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: black; font-weight: bold" href="@Url.Action("LienHe", "Home")">LIÊN HỆ</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a style="color: black; font-weight: bold" role="button" class="nav-link dropdown" href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SẢN PHẨM <i class="fa fa-chevron-down"></i></a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                @Html.Action("MENU", "Home")
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid">
+                <div class="row">
+                    <div id="carouseExampleIndicators" class="carousel slide mt-1 w-100" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouseExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouseExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouseExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src="~/Content/image/slideshow_1.jpg" alt="First slide" />
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="~/Content/image/slideshow_2.jpg" alt="Second slide" />
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="~/Content/image/slideshow_3.jpg" alt="Third slide" />
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouseExampleIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouseExampleIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <div id='ads-left'>
+                    <div style='margin: 300px 0 5px 0; padding: 0; width: 200px; position: fixed; left: 0; top: 0;'>
+                        <a>
+                            <img border='0' class="w-100" src="~/Content/image/welcome.gif" /></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md">
+                <br />
+                <br />
+                @RenderBody()
+
+                <br />
+                <br />
+            </div>
+        </div>
+
+        <div class="row dong1">
+            <div class="col-md-3"></div>
+            <div class="col-md">
+                <p style="font-size: 35px; text-align: center;">THIẾT BỊ ĐIỆN TỬ NUPITUMI</p>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+        <div class="row dong1">
+            <div class="col-md-1"></div>
+            <div class="col-md">
+                <i class="fa fa-phone fa-rotate-90" aria-hidden="true"></i>Tổng Đài: 1900 464650<br />
+                <i class="fa fa-phone fa-rotate-90" aria-hidden="true"></i>Hotline:0934 789789 - 0912 004999<br />
+                <i class="fa fa-map-marker" aria-hidden="true"></i>Địa Chỉ: 102 Quang Tấn, phường 8, quận Tân Phú , TP.HCM<br />
+                <i class="fa fa-phone fa-rotate-90" aria-hidden="true"></i>Điện Thoại: +84 3611 6366<br />
+                <i class="fa fa-envelope" aria-hidden="true"></i>Email:nupitumi102@gmail.com.<br />
+                <i class="fa fa-fax" aria-hidden="true"></i>Fax: +84 3611 8301<br />
+            </div>
+            <div class="col-md-6">
+                <div class="row dong1">
+                    <div class="col-md-5"></div>
+                    <div class="col-md">LIÊN KẾT VỚI CHÚNG TÔI</div>
+                </div>
+                <div class="row dong1">
+                    <div class="col-md"></div>
+                    <div class="col-md"></div>
+                    <div class="col-md">
+                        <div class="sm">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="sm">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="sm">
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="sm">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row dong1">&nbsp</div>
+    </div>
+    <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Đăng ký</h4>
+                    <button type="button" class="close" id="iclose" data-dismiss="modal">x</button>@*NÚT TẮT*@
+                </div>
+                <div class="modal-body">
+                    <form action="~/KhachHang/AddAccount" method="post" onsubmit="return FormRe()">
+                        <p><input class="form-control" name="txtHoTen" style="width: 420px;" type="text" id="txtHoTen" placeholder="Họ tên" /></p>
+                        <div class="form-inline">
+                        Ngày Sinh &nbsp;&nbsp;
+                    <input class="form-control" style="width: 170px;" name="dtpNgaySinh" type="date" id="dtpNgaySinh" />
+                    &nbsp;&nbsp;&nbsp;Giới Tính &nbsp;&nbsp;
+                    <select class="form-control" style="width: 80px;" name="GioiTinh">
+                        <option>Nam</option>
+                        <option>Nữ</option>
+                    </select>
+                            </div>
+                    <p>
+                        <input class="form-control" name="txtEmail" style="width: 420px;" type="email" id="txtEmail" placeholder="Email" />
+                    </p>
+                    <p>
+                        <input class="form-control" name="txtSDT" style="width: 420px;" type="text" id="txtSDT" placeholder="Số điện thoại" />
+                    </p>
+                    <p>
+                        <input class="form-control" name="txtDC" style="width: 420px;" type="text" id="txtDC" placeholder="Địa chỉ" />
+                    </p>
+                    <p>
+                        <input class="form-control" name="txtTaikhoan" style="width: 420px;" type="text" id="txtTaikhoan" placeholder="Tài khoản đăng nhập" />
+                    </p>
+                    <p>
+                        <input class="form-control" name="txtPass" style="width: 420px;" type="password" placeholder="Password" id="txtPass" />
+                    </p>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary" id="btnAdd">Đăng ký</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                </form>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+<script language="javascript">
+    function FormRe() {
+
+        var acc = document.getElementById('txtTaikhoan').value;
+        var pass = document.getElementById('txtPass').value;
+        var email = document.getElementById('txtEmail').value;
+        var sdt = document.getElementById('txtSDT').value;
+        var dtpNgaySinh = document.getElementById('dtpNgaySinh').value;
+        var txtDC = document.getElementById('txtDC').value;
+        var hoten = document.getElementById('txtHoTen').value;
+        // Bước 2: Kiểm tra dữ liệu hợp lệ hay không
+
+        if (acc == '') {
+            alert('Bạn chưa nhập tên đăng nhập');
+        }
+        else
+            if (pass == '') {
+                alert('Bạn chưa nhập mật khẩu');
+            }
+            else if (email == '') {
+                alert('Bạn chưa nhập email');
+            }
+            else if (sdt == '') {
+                alert('Bạn chưa nhập số điẹn thoại');
+            }
+            else if (txtDC == '') {
+                alert('Bạn chưa nhập địa chỉ ');
+            }
+            else if (hoten == '') {
+                alert('Bạn chưa nhập tên ');
+            }
+            else if (dtpNgaySinh == '') {
+                alert('Bạn chưa nhập ngày sinh ');
+            }
+            else {
+                alert('Dữ liệu hợp lệ!!!');
+                return true;
+            }
+        return false;
+    }
+</script>
+
+    <link href="~/Content/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Content/bootstrap/js/jquery-3.3.1.min.js"></script>
+    <script src="~/Content/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/Content/bootstrap/js/search.js"></script>
+</body>
+</html>

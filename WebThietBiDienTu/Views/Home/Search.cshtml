@@ -1,0 +1,18 @@
+﻿@using WebThietBiDienTu.Models
+@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_LayoutHienThi.cshtml";
+
+    string key = Request.QueryString["key"];
+}
+
+<h2>SEARCH</h2>@key
+
+@if (key == "")
+{
+    <h3>Vui lòng nhập tên sản phẩm để tìm kiếm</h3> 
+}
+else
+{
+    
+}

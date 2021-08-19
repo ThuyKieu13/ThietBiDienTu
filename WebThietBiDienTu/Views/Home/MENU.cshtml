@@ -1,0 +1,11 @@
+﻿@using WebThietBiDienTu.Models;
+@model List<NhomHang>
+
+<ul class="nav flex-column">
+    @foreach (NhomHang nhom in @Model)
+    {
+         <li class="nav-item border">
+        @Html.ActionLink(@nhom.TenNhomHang, "HTSpTheoNhom", "Home", new { id = nhom.MaNhom }, new { @class = "nav-link" })
+         </li>
+    }  
+</ul>

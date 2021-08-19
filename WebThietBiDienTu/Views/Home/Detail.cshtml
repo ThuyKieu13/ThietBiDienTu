@@ -1,0 +1,61 @@
+﻿@using WebThietBiDienTu.Models;
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_LayoutHienThi.cshtml";
+    List<SanPham> dsSP_nhom = ViewBag.nhom;
+    List<SanPham> dsSP_nsx = ViewBag.nsx;
+}
+@model SanPham
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <img class="w-100" src="~/Content/image/@Model.HinhAnh" />
+        </div>
+        <div class="col-md-9">
+            <p style="font-weight: bold;">@Model.TenSP</p>
+            <p>Mô tả: @Model.MoTa</p>
+            <p>Thương hiệu: @Model.NhaCungCap.TenNCC</p>
+            <p>Giá: <span style="color: red">@Model.GiaBan&#8363;</span> (Đã gồm VAT)</p>
+            @Html.ActionLink("Mua hàng", "Detail", "Home", new{id = @Model.MaSP}, new{@class="btn btn-warning"})<br /><br />
+        </div>
+    </div>
+    <div class="row">
+        <h2 class="w-100" style="background: #0094ff;">Các sản phẩm cùng loại</h2>
+        @foreach (SanPham sp in dsSP_nhom)
+        {
+            <div class="col-md-3">
+                <a href="@Url.Action("Details", "Home", new { id = sp.MaSP })">
+                    <img class="w-100" src="~/Content/image/@sp.HinhAnh" /></a>
+                <p>@sp.TenSP</p>
+            </div><br /><br />
+        }
+    </div>
+    <div class="row">
+        <h2 class="w-100" style="background: #0094ff;">Các sản phẩm cùng thương hiệu</h2>
+        @foreach (SanPham sp in dsSP_nsx)
+        {
+            <div class="col-md-3">
+                <a href="@Url.Action("Details", "Home", new { id = sp.MaSP })">
+                    <img class="w-100" src="~/Content/image/@sp.HinhAnh" /></a>
+                <p>@sp.TenSP</p>
+            </div>
+        }
+    </div>
+    </div>
+
+
+
+        @*<div class="row">
+            <div class="col-md-4 mt-1">
+                <img class="w-100" src="~/Content/image/@Model.HinhAnh" />
+            </div>
+            <div class="col-md-8">
+                <p style="font-weight: bold;">@Model.TenSP</p>
+                <p>Mô tả: @Model.MoTa</p>
+                <p>Thương hiệu: @Model.NhaCungCap.TenNCC</p>
+                <p>Giá: <span style="color: red">@Model.GiaBan&#8363;</span> (Đã gồm VAT)</p>
+                @Html.ActionLink("Mua", "Detail", "Home", new{id = @Model.MaSP}, new{@class="btn btn-warning"})
+            </div>
+        </div>
+    </div>*@

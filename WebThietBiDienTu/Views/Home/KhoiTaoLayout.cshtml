@@ -1,0 +1,10 @@
+﻿@using WebThietBiDienTu.Models;
+@model GioHang
+@if (Model == null)
+{ 
+    <label>0</label>
+}
+else
+{
+    <label>@Model.somathang()</label>
+}

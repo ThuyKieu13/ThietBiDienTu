@@ -1,0 +1,93 @@
+﻿@using WebThietBiDienTu.Models;
+@{
+    Layout = null;
+    Layout = "~/Views/Shared/_LayoutHienThi.cshtml";
+}
+
+<!DOCTYPE html>
+<div class="container">
+    <h2>Đăng ký</h2>
+    <div class="loginbox">
+        <form action="~/KhachHang/AddAccount" method="post" onsubmit="return FormRe()">
+            <p>
+                <input class="form-control" name="txtHoTen" type="text" id="txtHoTen" placeholder="Họ tên" />
+            </p>
+            <div class="form-inline">
+                <div class="col">
+                    Ngày Sinh &nbsp;&nbsp;
+                    <input class="form-control" style="width: 170px;" name="dtpNgaySinh" type="date" id="dtpNgaySinh" />
+                </div>
+                <div class="col">
+                    Giới Tính &nbsp;&nbsp;
+                    <select class="form-control" style="width: 80px;" name="GioiTinh">
+                        <option>Nam</option>
+                        <option>Nữ</option>
+                    </select>
+                </div>
+            </div>
+            <br />
+            <p>
+                <input class="form-control" name="txtEmail" aria-describedby="emailHelp" type="email" id="txtEmail" placeholder="Email" />
+            </p>
+            <p>
+                <input class="form-control" name="txtSDT" type="text" id="txtSDT" placeholder="Số điện thoại" />
+            </p>
+            <p>
+                <input class="form-control" name="txtDC" type="text" id="txtDC" placeholder="Địa chỉ" />
+            </p>
+            <p>
+                <input class="form-control" name="txtTaikhoan" type="text" id="txtTaikhoan" placeholder="Tài khoản đăng nhập" />
+            </p>
+            <p>
+                <input class="form-control" name="txtPass" type="password" placeholder="Password" id="txtPass" />
+            </p>
+            <br />
+
+            <button style="border-radius: 120px;" type="submit" class="btn btn-primary" id="btnAdd">Đăng ký</button>
+            <br />
+            <br />
+
+        </form>
+    </div>
+</div>
+<script language="javascript">
+    function FormRe() {
+
+        var acc = document.getElementById('txtTaikhoan').value;
+        var pass = document.getElementById('txtPass').value;
+        var email = document.getElementById('txtEmail').value;
+        var sdt = document.getElementById('txtSDT').value;
+        var dtpNgaySinh = document.getElementById('dtpNgaySinh').value;
+        var txtDC = document.getElementById('txtDC').value;
+        var hoten = document.getElementById('txtHoTen').value;
+        // Bước 2: Kiểm tra dữ liệu hợp lệ hay không
+
+        if (acc == '') {
+            alert('Bạn chưa nhập tên đăng nhập');
+        }
+        else
+            if (pass == '') {
+                alert('Bạn chưa nhập mật khẩu');
+            }
+            else if (email == '') {
+                alert('Bạn chưa nhập email');
+            }
+            else if (sdt == '') {
+                alert('Bạn chưa nhập số điẹn thoại');
+            }
+            else if (txtDC == '') {
+                alert('Bạn chưa nhập địa chỉ ');
+            }
+            else if (hoten == '') {
+                alert('Bạn chưa nhập tên ');
+            }
+            else if (dtpNgaySinh == '') {
+                alert('Bạn chưa nhập ngày sinh ');
+            }
+            else {
+                alert('Dữ liệu hợp lệ!!!');
+                return true;
+            }
+        return false;
+    }
+</script>

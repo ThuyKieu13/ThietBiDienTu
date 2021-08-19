@@ -1,0 +1,73 @@
+﻿@model WebThietBiDienTu.Models.SanPham
+@{
+    ViewBag.Title = "Sua";
+    Layout = "~/Views/Shared/_LayoutHienThi.cshtml";
+}
+
+<script src="~/Scripts/tinymce/js/tinymce/tinymce.min.js"></script>
+<script>tinymce.init({ selector: 'textarea' });</script>
+<h2>Sửa sản phẩm</h2>
+
+@using (Html.BeginForm("Create", "Home", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+{
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Sản phẩm</legend>
+
+        <div class="form-group">
+            <div class="col-md-4">Tên sản phẩm</div>
+            <div class="col-md-8">@Html.EditorFor(model => @Model.TenSP)</div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-4">Giá</div>
+            <div class="col-md-8">@Html.EditorFor(model => @Model.GiaBan)</div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-4">Mô tả</div>
+            <div class="col-md-8">
+                <textarea name="MoTa">@Model.MoTa</textarea>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-4">Hình ảnh</div>
+            <div class="col-md-8">Chọn ảnh mới
+                <input type="file" name="fupload" />
+                <img style="width:50%" src="~/Content/image/@Model.HinhAnh" />(Ảnh hiện tại)
+                @ViewBag.a
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-4">Số lượng tồn</div>
+            <div class="col-md-8">@Html.EditorFor(model => @Model.GiaBan)</div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-4">Hãng</div>
+            <div class="col-md-8">@Html.DropDownList("ncc")</div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-4">Nhóm hàng</div>
+            <div class="col-md-8">@Html.DropDownList("nh")</div>
+        </div>
+
+        <div class="form-group">
+
+            <div class="col-md-4">Loại</div>
+            <div class="col-md-8">@Html.EditorFor(model => @Model.Loai)</div>
+        </div>
+
+        <p>
+            <input type="submit" value="Lưu" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Admin")
+</div>

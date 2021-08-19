@@ -1,0 +1,55 @@
+﻿@using WebThietBiDienTu.Models;
+@{
+    ViewBag.Title = "XemGioHang";
+    Layout = "~/Views/Shared/_LayoutHienThi.cshtml";
+}
+
+@model GioHang
+
+@if (Model == null)
+{
+    <h2>Giỏ hàng trống</h2>
+    <a class="nav-link" style="border-radius: 120px; background: #2c82dd; color: white; text-align: center" href="@Url.Action("Index", "Home")">Mua hàng nào</a>
+}
+else
+{
+    
+    
+    
+    <table class="table" style="text-align: center;">
+    <tr>
+        <th> Tên sản phẩm </th>
+        <th> Ảnh </th>
+        <th style="width: 120px"> Số Lượng </th>
+        <th> Đơn Giá </th>
+        <th style="width: 150px"> Thành Tiền </th>
+        <th> </th>
+        <th> </th>
+    </tr>
+    @foreach (CartItem item in Model.dsSP)
+    {
+        <tr>
+            <td> @item.iTenSP </td>
+            <td><img style="width: 220px; height: 200px;" src="~/Content/image/@item.HinhAnh" /></td>
+            <td>@item.iSL</td>
+            <td> @item.iGia </td>
+            <td> @item.ThanhTien </td>
+            <td> <a href="#"> Xóa </a> </td>
+            <td> <a href="#" class="btn btn-secondary"> Sửa </a> </td>
+        </tr>
+    }
+      <tr>
+          <td colspan="3"> TỔNG </td>
+
+          <td class="text-danger text-bold"> @Model.TongSL() </td>
+          <td> </td>
+          <td class="text-danger text-bold"> @String.Format("{0:#,##}", Model.TongThanhTien())</td>
+          <td>
+              @Html.ActionLink("Xóa giỏ hàng", "XoaGioHang", "DatHang", new{@class="btn btn-danger"})
+          </td>
+          <td colspan="2">
+              @Html.ActionLink("Đặt hàng", "XacNhanDonHang", "DatHang", new{@class="btn btn-danger"})
+          </td>
+      </tr>
+</table>
+} 

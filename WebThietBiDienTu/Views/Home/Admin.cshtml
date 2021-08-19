@@ -1,0 +1,84 @@
+﻿@model IEnumerable<WebThietBiDienTu.Models.SanPham>
+@{
+    ViewBag.Title = "Admin";
+    Layout = "~/Views/Shared/_LayoutHienThi.cshtml";
+}
+
+@helper Truncate(string input, int length)
+{
+    if (input.Length < length)
+    {
+    @input
+    }
+    else
+    {
+    @input.Substring(0, length) <text>...</text>
+    }
+}
+<div class="container-fluid">
+    <h2>QUẢN LÝ THÔNG TIN SẢN PHẨM</h2>
+    <p>
+    @Html.ActionLink("Thêm mới", "Create")
+</p>
+    <table style="text-align: center;">
+        <tr>
+            <th>
+                Tên sản phẩm
+            </th>
+            <th>
+                Giá
+            </th>
+            <th>
+                Mô tả
+            </th>
+            <th>
+                Hình
+            </th>
+            <th>
+                Số lượng tồn
+            </th>
+            <th>
+                Hãng
+            </th>
+            <th>
+                Loại
+            </th>
+            <th>
+                Chức năng
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayTextFor(modelItem => item.TenSP)
+                    @*@Html.DisplayFor(modelItem => item.TenSP)*@
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GiaBan)
+                </td>
+                <td>
+                    @Truncate(item.MoTa, 100)
+                </td>
+                <td>
+                    <img style="width:50%" src="~/Content/image/@item.HinhAnh" />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SLTon)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NhaCungCap.TenNCC)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Loai)
+                </td>
+                <td>
+                    @Html.ActionLink("Sửa", "Sua", new { id = item.MaSP })<br />
+                    @Html.ActionLink("Chi tiết", "Detail", new { id = item.MaSP })<br />
+                    @Html.ActionLink("Xóa", "Xoa", new { id = item.MaSP })
+                </td>
+            </tr>
+        }
+    </table>
+</div>

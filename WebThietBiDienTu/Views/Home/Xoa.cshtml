@@ -1,0 +1,49 @@
+﻿@model WebThietBiDienTu.Models.SanPham
+@{
+    ViewBag.Title = "Xoa";
+    Layout = "~/Views/Shared/_LayoutHienThi.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+        <table>
+            <tr>
+                <td style="width: 200px;">Tên sản phẩm</td>
+                <td>@Model.TenSP</td>
+            </tr>
+            <tr>
+                <td>Giá</td>
+                <td>@Model.GiaBan</td>
+            </tr>
+            <tr>
+                <td>Mô tả</td>
+                <td>@Model.MoTa</td>
+            </tr>
+            <tr>
+                <td>Hình ảnh</td>
+                <td><img style="width:25%" src="~/Content/image/@Model.HinhAnh" /></td>
+            </tr>
+            <tr>
+                <td>Số lượng tồn</td>
+                <td>@Model.SLTon</td>
+            </tr>
+            <tr>
+                <td>Hãng</td>
+                <td>@Model.NhaCungCap.TenNCC</td>
+            </tr>
+            <tr>
+                <td>Nhóm hàng</td>
+                <td>@Model.NhomHang.TenNhomHang</td>
+            </tr>
+            <tr>
+                <td>Loai</td>
+                <td>@Model.Loai</td>
+            </tr>
+        </table> 
+
+    <div class="form-actions no-color">
+        <input type="submit" value="Xóa" class="btn btn-default" />
+        @Html.ActionLink("Back to List", "Admin")
+    </div>
+}

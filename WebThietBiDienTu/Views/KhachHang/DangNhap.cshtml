@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "DangNhap";
+    Layout = "~/Views/Shared/_LayoutHienThi.cshtml";
+}
+
+<div class="container" style="text-align: center">
+    <form action="/KhachHang/DangNhap" method="post">
+        <p style="color: #056bf7; font-size: 17px;">ĐĂNG NHẬP TÀI KHOẢN</p>
+        <p>Nhập tài khoản và mật khẩu của bạn</p>
+        <p>
+            <input class="form-control" type="text" name="txtName" placeholder="Tên đăng nhập"/>
+        </p>
+        <p>
+            <input class="form-control" type="password" name="txtPass" placeholder="Mật khẩu"/>
+        </p>
+        Khách hàng mới? <a href="@Url.Action("CreateAccount", "KhachHang")">Đăng ký</a>
+        <p>
+            <input type="submit" value="Đăng nhập" />
+        </p>
+    </form>
+</div>
